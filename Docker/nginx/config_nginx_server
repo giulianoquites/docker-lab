@@ -1,4 +1,4 @@
-#Comandos para executar dentro do Container
+#Run a command in running containers. 
 yum install wget -y
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
 yum install nginx -y
