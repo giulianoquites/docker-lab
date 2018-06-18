@@ -7,3 +7,6 @@ yum install php-fpm.x86_64
 echo "giuliano.quites" >  /var/www/html/index.html
 user www-data;
 yum install net-tools
+nginx
+nohup php-fpm&
+

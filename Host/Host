@@ -14,3 +14,7 @@ useradd www-data -s /sbin/nologin
 chown www-data.www-data -R /dados/
 echo "net.ipv4.ip_forward = 1" > /etc/sysctl.conf
 sysctl -w net.ipv4.ip_forward=1
+smbpasswd -a www-data #Pass User Samba
+systemctl restart smb
+
+
