@@ -1,2 +1,2 @@
-docker run -it -p 80:80 -v /dados:/var/www/html:rw --name lab02 centos
-docker run -it -p 3306:3306 --name MySQLServer centos
+docker run -it -p 80:80 -v /dados:/var/www/html:rw --name nginx_server centos
+docker run -it -p 3306:3306 --name mariaserver centos
