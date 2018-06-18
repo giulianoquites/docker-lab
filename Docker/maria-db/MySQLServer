@@ -1,0 +1,6 @@
+#Comandos para executar dentro do Container
+yum install wget vim net-tools -y ; rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+yum install mariadb-server.x86_64 mariadb.x86_64 -y
+mysql_install_db
+chown mysql.mysql /var/lib/mysql/ -R
+nohup mysqld_safe&

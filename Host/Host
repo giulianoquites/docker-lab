@@ -1,0 +1,16 @@
+#Comandos para executar no Host
+yum update -y
+yum install wget -y
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+yum install -y net-tools docker samba
+systemctl enable docker
+systemctl enable smb
+systemctl disable firewalld
+systemctl stop firewalld
+setenforce 0 
+sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
+mkdir /dados
+useradd www-data -s /sbin/nologin
+chown www-data.www-data -R /dados/
+echo "net.ipv4.ip_forward = 1" > /etc/sysctl.conf
+sysctl -w net.ipv4.ip_forward=1

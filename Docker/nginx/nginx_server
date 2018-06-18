@@ -1,0 +1,9 @@
+#Comandos para executar dentro do Container
+yum install wget -y
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+yum install nginx -y
+useradd www-data -d /var/www/html  -s /sbin/nologin
+yum install php-fpm.x86_64
+echo "giuliano.quites" >  /var/www/html/index.html
+user www-data;
+yum install net-tools
